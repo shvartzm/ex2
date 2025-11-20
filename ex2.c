@@ -36,7 +36,7 @@ int main()
             int counter1 = 0;
             do
             {
-                printf("please enter a positive number:");
+                printf("please enter a positive number:\n");
                 scanf("%d", &decimalNumber);
                 if(decimalNumber == 0){ // input validation
                    break;
@@ -72,6 +72,7 @@ int main()
                     printf("Invalid number, please try again\n");
                     scanf("%d", &duckNumber);
                 }
+                printf("you entered %d ducks\n", duckNumber);
                 for (int i = 1; i <= duckNumber; i++){
                     printf("duck %d do QUAK? 1 for yes, 0 for no\n",i);
                     scanf("%d", &action);
