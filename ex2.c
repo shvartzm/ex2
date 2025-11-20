@@ -38,9 +38,6 @@ int main()
             {
                 printf("please enter a positive number:\n");
                 scanf("%d", &decimalNumber);
-                if(decimalNumber == 0){ // input validation
-                   break;
-                } 
                 while(!(decimalNumber > 0)){ // input validation
                     printf("Invalid number, please try again\n");
                     scanf("%d", &decimalNumber);
