@@ -21,11 +21,6 @@ int main()
         printf("6. Good Night Ducks\n");
         scanf("%d", &pick);
 
-        //input check
-        if(!(pick >= 1 && pick <= 6)){
-            printf("Invalid option, please try again\n");
-            continue;
-        }
 
         //menu handling
         switch (pick)
@@ -174,15 +169,14 @@ int main()
             }
             break; 
         }
+
+        case 6: // 6 will break loop
+                break;
         default:
             printf("Invalid option, please try again\n");
             break; 
         }
     } while (pick != 6);
     printf("Good night! See you at the pond tomorrow.\n");
-
-
-
-
     return 0;
 }
