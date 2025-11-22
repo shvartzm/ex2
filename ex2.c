@@ -87,13 +87,13 @@ int main()
             int result = 1;
             printf("please enter the number\n");
             scanf("%d", &base);
-            while(!(base > 0)){
+            while(!(base >= 0)){
                     printf("Invalid number, please try again\n"); // input validation
                     scanf("%d", &base);
             }
             printf("please enter the exponent\n");
             scanf("%d", &expo);
-            while(!(expo > 0)){
+            while(!(expo >= 0)){
                     printf("Invalid number, please try again\n"); // input validation
                     scanf("%d", &expo);
             }
