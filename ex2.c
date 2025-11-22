@@ -57,40 +57,35 @@ int main()
         
         
         case 2: // The Memory Game
-            int duckNumber;// we will use it as a multiplier
+           
+            int duckNumber, action;
             int duckActions = 0;
-            int action = 0; // duck action
-            int exponent = 1; // represent math.pow(10,i-1)
-            do
-            {
-                printf("please enter the number of ducks:\n");
+            printf("please enter the number of ducks:\n");
+            scanf("%d", &duckNumber);
+            while(!(duckNumber > 0)){ // input validation
+                printf("Invalid number, please try again\n");
                 scanf("%d", &duckNumber);
-                while(!(duckNumber > 0)){  // input validation
-                    printf("Invalid number, please try again\n");
-                    scanf("%d", &duckNumber);
-                }
-                printf("you entered %d ducks\n", duckNumber);
-                for (int i = 1; i <= duckNumber; i++){
-                    printf("duck %d do QUAK? 1 for yes, 0 for no\n",i);
-                    scanf("%d", &action);
-                    while(!(action == 1 || action == 0)){
-                        printf("Invalid number, please try again\n"); // input validation
-                        scanf("%d", &action);
-                    }
-                    duckActions += action * exponent; // creating a 1 and 0 number based on actions
-                    exponent *= 10;
-                    action = 0;  
-                }
-                for (int i = 1; i <= duckNumber; i++){
-                    if (duckActions % 10 == 1){  //decrypting the action number
-                        printf("duck number %d do Quak\n", i);  
-                } else{
-                  printf("duck number %d do Sh...\n", i);
-                }
-                duckActions /= 10;
             }
-            } while (duckActions > 0);
+            printf("you entered %d ducks\n", duckNumber);
+            for(int i = 0; i < duckNumber; i++){
+                printf("duck %d do QUAK? 1 for yes, 0 for no\n",i + 1);
+                scanf("%d", &action);
+                while(!(action == 1 || action == 0)){
+                    printf("Invalid number, please try again\n"); // input validation
+                    scanf("%d", &action);
+                }
+                duckActions = (duckActions << 1) + action; // formatting number in binary based on input
+            }
+            for (int i = duckNumber -1 ; i >= 0; i--){ // going from msb to lsb 
+                if (((duckActions >> i) & 1) == 1){     //decrypting the action, getting msb of each small part
+                    printf("duck number %d do Quak\n", duckNumber - i);
+                }
+                else{
+                    printf("duck number %d do Sh...\n", duckNumber - i);
+                }
+            }
             break;
+
 
 
 
