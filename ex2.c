@@ -31,7 +31,7 @@ int main()
         switch (pick)
         {
         case 1: // Ducky's Unity Game
-            
+        {   
             int decimalNumber;
             int counter1 = 0;
             do
@@ -55,9 +55,9 @@ int main()
             printf("Ducky earns %d corns\n", counter1);
             break;
         
-        
+        }
         case 2: // The Memory Game
-           
+        {   
             int duckNumber, action;
             int duckActions = 0;
             printf("please enter the number of ducks:\n");
@@ -85,12 +85,9 @@ int main()
                 }
             }
             break;
-
-
-
-
-
+        }
         case 3: // Professor Pat's Power Calculation
+        {    
             int base, expo;
             int result = 1;
             printf("please enter the number\n");
@@ -112,9 +109,10 @@ int main()
             break;
  
 
-
+        }
         case 4: // The Duck Parade
-             int numDucks;
+        {    
+            int numDucks;
              printf("please enter number of ducks:\n");
              scanf("%d", &numDucks);
              while (!(numDucks > 0)){
@@ -150,12 +148,9 @@ int main()
                     numDucks -= 10;
              }
             break;
-        
-        
-
-
-
+            }
         case 5: // The Mystery of the Repeated Digits
+        {    
             int number;
             int temp;
             printf("please enter number\n");
@@ -177,7 +172,11 @@ int main()
                 number /= 10;
                 temp = number /10;
             }
-            break;  
+            break; 
+        }
+        default:
+            printf("Invalid option, please try again\n");
+            break; 
         }
     } while (pick != 6);
     printf("Good night! See you at the pond tomorrow.\n");
