@@ -110,7 +110,7 @@ int main()
             int numDucks;
              printf("please enter number of ducks:\n");
              scanf("%d", &numDucks);
-             while (!(numDucks > 0)){
+             while (!(numDucks >= 0)){
                 printf("Invalid number, please try again\n"); // input validation
                 scanf("%d", &numDucks);
              }
