@@ -54,7 +54,7 @@ int main()
         case 2: // The Memory Game
         {   
             int duckNumber, action;
-            int duckActions = 0;
+            long int duckActions = 0;
             printf("please enter the number of ducks:\n");
             scanf("%d", &duckNumber);
             while(!(duckNumber > 0)){ // input validation
@@ -84,7 +84,7 @@ int main()
         case 3: // Professor Pat's Power Calculation
         {    
             int base, expo;
-            int result = 1;
+            long int result = 1;
             printf("please enter the number\n");
             scanf("%d", &base);
             while(!(base >= 0)){
