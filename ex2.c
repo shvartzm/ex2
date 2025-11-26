@@ -53,7 +53,7 @@ int main()
         }
         case 2: // The Memory Game
         {   
-            int duckNumber, action;
+            int duckNumber, action; 
             long int duckActions = 0;
             printf("please enter the number of ducks:\n");
             scanf("%d", &duckNumber);
@@ -100,7 +100,7 @@ int main()
             for (int i =0 ; i < expo; i++){  // for loop base * base * base * ... expo times -> base^expo
                 result *= base;
             }
-            printf("your power is: %d\n", result);
+            printf("your power is: %ld\n", result);
             break;
  
 
